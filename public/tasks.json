@@ -1,0 +1,72 @@
+[
+      {
+        "title": "Create homepage layout",
+        "description": "Design and implement the main layout for the homepage",
+        "time": "15",
+        "priority": "high",
+        "completed": false
+      },
+      {
+        "title": "Implement responsive navigation",
+        "description": "Make the website navigation menu responsive for mobile devices",
+        "time": "20",
+        "priority": "medium",
+        "completed": false
+      },
+      {
+        "title": "Optimize website performance",
+        "description": "Analyze and improve website loading speed and performance",
+        "time": "35",
+        "priority": "high",
+        "completed": false
+      },
+      {
+        "title": "Fix cross-browser compatibility issues",
+        "description": "Address browser compatibility problems and ensure consistent website rendering",
+        "time": "55",
+        "priority": "medium",
+        "completed": false
+      },
+      {
+        "title": "Implement contact form functionality",
+        "description": "Create a contact form and enable form submission with server-side processing",
+        "time": "80",
+        "priority": "high",
+        "completed": true
+      },
+      {
+        "title": "Integrate third-party API",
+        "description": "Incorporate a third-party API to fetch and display data on a specific page",
+        "time": "25",
+        "priority": "medium",
+        "completed": false
+      },
+      {
+        "title": "Optimize website for SEO",
+        "description": "Implement SEO best practices to improve website visibility and search engine ranking",
+        "time": "120",
+        "priority": "high",
+        "completed": false
+      },
+      {
+        "title": "Write unit tests",
+        "description": "Develop and execute unit tests to ensure code quality and prevent regressions",
+        "time": "45",
+        "priority": "medium",
+        "completed": false
+      },
+      {
+        "title": "Implement authentication functionality",
+        "description": "Add user authentication and authorization features to restrict access to certain pages",
+        "time": "25",
+        "priority": "high",
+        "completed": true
+      },
+      {
+        "title": "Refactor CSS code",
+        "description": "Improve the structure and organization of CSS code for better maintainability",
+        "time": "55",
+        "priority": "medium",
+        "completed": false
+      }
+    ]
