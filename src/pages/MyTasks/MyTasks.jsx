@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { FaRegCheckCircle, FaRegClock, FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 
@@ -7,7 +8,7 @@ const MyTasks = () => {
   const [isDeleted, setIsDeleted] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/myTasks")
+    fetch("https://task-manager-server-eta-seven.vercel.app/myTasks")
       .then((res) => res.json())
       .then((data) => {
         setMyTasks(data);
@@ -26,17 +27,16 @@ const MyTasks = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/myTasks/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://task-manager-server-eta-seven.vercel.app/myTasks/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
-              Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-              )
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
               setIsDeleted(!isDeleted);
             }
           });
@@ -45,13 +45,16 @@ const MyTasks = () => {
   };
 
   const handleStatus = (item) => {
-    fetch(`http://localhost:5000/myTasks/${item._id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ completed: true }),
-    })
+    fetch(
+      `https://task-manager-server-eta-seven.vercel.app/myTasks/${item._id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ completed: true }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {
@@ -71,6 +74,9 @@ const MyTasks = () => {
 
   return (
     <div className="my-10">
+      <Helmet>
+        <title>Task Vault | My Tasks</title>
+      </Helmet>
       <h1 className="text-2xl lg:text-5xl font-bold uppercase text-center my-10">
         My Tasks List
       </h1>

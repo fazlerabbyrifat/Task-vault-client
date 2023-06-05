@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 
 const AddTask = () => {
@@ -12,7 +13,7 @@ const AddTask = () => {
     data.completed = false;
 
     // Make an API request to add the task
-    fetch("http://localhost:5000/tasks", {
+    fetch("https://task-manager-server-eta-seven.vercel.app/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -31,6 +32,9 @@ const AddTask = () => {
 
   return (
     <div className="my-10">
+      <Helmet>
+        <title>Task Vault | Add Task</title>
+      </Helmet>
       <h1 className="text-2xl lg:text-5xl font-bold uppercase text-center my-10">
         Add a new task
       </h1>

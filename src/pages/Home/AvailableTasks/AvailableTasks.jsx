@@ -6,7 +6,7 @@ const AvailableTasks = () => {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/tasks")
+    fetch("https://task-manager-server-eta-seven.vercel.app/tasks")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -15,7 +15,7 @@ const AvailableTasks = () => {
   }, []);
 
   const handleTaskStart = (task) => {
-    fetch("http://localhost:5000/myTasks", {
+    fetch("https://task-manager-server-eta-seven.vercel.app/myTasks", {
       method: "POST",
       headers: {
         "content-type": "application/json",
