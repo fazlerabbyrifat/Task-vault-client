@@ -6,14 +6,14 @@ const Banner = () => {
     <div className="">
       <div className="max-w-screen-xl bg-white shadow-lg rounded-lg">
         <div className="md:flex gap-10">
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <img
               src={banner}
               alt="Banner Image"
               className="h-full w-full"
             />
           </div>
-          <div className="w-1/2 p-6 flex flex-col justify-center ">
+          <div className="lg:w-1/2 p-6 flex flex-col justify-center ">
             <h1 className="text-2xl font-bold mb-4">Welcome to Task Vault</h1>
             <p className="text-gray-700">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris

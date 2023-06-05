@@ -8,17 +8,20 @@ const Navbar = () => {
         <Link to='/'>Home</Link>
     </li>
     <li>
-        <Link to='/'>My Tasks</Link>
+        <Link to='/myTasks'>My Tasks</Link>
     </li>
     <li>
-        <Link to='/'>About</Link>
+        <Link to='/addTask'>Add Task</Link>
     </li>
     <li>
-        <Link to='/'>Blogs</Link>
+        <Link to='/about'>About</Link>
+    </li>
+    <li>
+        <Link to='/blogs'>Blogs</Link>
     </li>
     </>
   return (
-    <div className="navbar fixed z-30 opacity-70 max-w-screen-xl bg-black text-white">
+    <div className="navbar max-w-screen-xl bg-base-200">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
